@@ -1,11 +1,12 @@
-label, input{
-    margin: 10px;
-    padding: 5px;
+label,
+input {
+  margin: 10px;
+  padding: 5px;
 }
 
-footer{
-    bottom: 0;
-    position: absolute;
-    width: 70%;
-    height: 40px;
+footer {
+  bottom: 0;
+  position: absolute;
+  width: 70%;
+  height: 40px;
 }
