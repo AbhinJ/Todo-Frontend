@@ -12,7 +12,7 @@ export default function LoginComponent() {
   function handleUserNameChange(e) {
     setUserName(e.target.value);
   }
-  const handleSubmit = (e) => {
+  function handleSubmit(e) {
     e.preventDefault();
     if (authContext.login(username, password)) {
       setShowErrorMessage(false);
@@ -20,7 +20,7 @@ export default function LoginComponent() {
     } else {
       setShowErrorMessage(true);
     }
-  };
+  }
 
   const authContext = useAuth();
   return (
@@ -56,7 +56,7 @@ export default function LoginComponent() {
               type="submit"
               name="login"
               value="Submit"
-              onClick={handleSubmit}
+              onClick={(e) => handleSubmit(e)}
             />
           </div>
         </form>

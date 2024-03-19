@@ -6,6 +6,7 @@ import ListTodos from "./ListTodos";
 import Error from "./Error";
 import Welcome from "./Welcome";
 import Login from "./Login";
+import CreateTodo from "./CreateTodo";
 import "../css/TodoApp.css";
 import AuthProvider, { useAuth } from "../security/AuthContext";
 
@@ -44,6 +45,14 @@ export default function TodoApp() {
               element={
                 <AuthenticatedRoute>
                   <ListTodos />
+                </AuthenticatedRoute>
+              }
+            />
+            <Route
+              path="/todo/:id"
+              element={
+                <AuthenticatedRoute>
+                  <CreateTodo />
                 </AuthenticatedRoute>
               }
             />
