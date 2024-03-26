@@ -56,7 +56,6 @@ export default function AuthProvider({ children }) {
         const jwtToken = "Bearer " + response.data.token;
         setToken(jwtToken);
         apiClient.interceptors.request.use((config) => {
-          console.log("Intercepting and adding a token");
           config.headers.Authorization = jwtToken;
           return config;
         });

@@ -50,7 +50,7 @@ export default function CreateTodo() {
     if (
       values.targetDate == null ||
       values.targetDate === "" ||
-      !moment(values.targetDate.isValid())
+      !moment(values.targetDate.isValid)
     )
       errors.targetDate = "Enter a target Date";
     return errors;
